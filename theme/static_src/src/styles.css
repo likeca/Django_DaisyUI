@@ -5,9 +5,9 @@
   themes: light --default;
 };
 
-.btn:active {
+/* .btn:active {
   color: red
-}
+} */
 
 /**
   * A catch-all path to Django template files, JavaScript, and Python files

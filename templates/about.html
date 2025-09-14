@@ -17,62 +17,52 @@
 {% endblock navbar_left %}
 
 {% block content %}
-  <div class="container mt-3">
-    <div class="row">
-      <div id="sec1" class="text-page">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center" style="margin-top: 40px;">
-              <h1>{% include "_brandname.html" %}</h1>
-              <p class="lead">An Awesome Tagline Goes Here</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="p-5 mt-3">
+    <div class="text-center mt-8">
+      <h1 class="text-4xl font-bold my-3">{% include "_brandname.html" %}</h1>
+      <p class="lead">An Awesome Tagline Goes Here</p>
+    </div>
 
-      <div id="sec2" class="text-page">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h2>Meet The Team</h2>
-              <p class="lead">The Wonderful People Behind the Site</p>
-            </div>
+    <div class="text-center my-5">
+      <div class="text-2xl font-bold">Meet The Team</div>
+      <p>The Wonderful People Behind the Site</p>
+    </div>
+    <div class="container">
+      <div class="row"></div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="text-center">
+            <img class="img-circle centered" src="{% static '/site/img/profile/default_140x140.png' %}" alt="profile pic" />
           </div>
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="text-center">
-                <img class="img-circle centered" src="/static/site/img/profile/default_140x140.png" alt="profile pic" />
-              </div>
-              <p class="heavy text-center">Cassidy Coder</p>
-              <h2>Front-end developer</h2>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              </p>
-            </div>
-            <div class="col-lg-4">
-              <div class="text-center">
-                <img class="img-circle centered" src="/static/site/img/profile/default_140x140.png" alt="profile pic" />
-              </div>
-              <p class="heavy text-center">James King</p>
-              <h2>CEO</h2>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              </p>
-            </div>
-            <div class="col-lg-4">
-              <div class="text-center">
-                <img class="img-circle centered" src="/static/site/img/profile/default_140x140.png" alt="profile pic" />
-              </div>
-              <p class="heavy text-center">Kate Lamport</p>
-              <h2>Front-end designer</h2>
-              <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-              </p>
-            </div>
+          <p class="heavy text-center">Cassidy Coder</p>
+          <h2>Front-end developer</h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="text-center">
+            <img class="img-circle centered" src="{% static '/site/img/profile/default_140x140.png' %}" alt="profile pic" />
           </div>
+          <p class="heavy text-center">James King</p>
+          <h2>CEO</h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <div class="text-center">
+            <img class="img-circle centered" src="{% static '/site/img/profile/default_140x140.png' %}" alt="profile pic" />
+          </div>
+          <p class="heavy text-center">Kate Lamport</p>
+          <h2>Front-end designer</h2>
+          <p>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          </p>
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-6">
         <div class="mx-4">
@@ -80,11 +70,11 @@
                   width="100%"
                   height="350"
                   frameborder="0"
-                  style="border:0"
+                  class="border-0"
                   allowfullscreen=""
                   aria-hidden="false"
                   tabindex="0"></iframe>
-          <div style="padding-top: 30px;">
+          <div class="mt-3">
             <h6>
               3500 Cambrian Rd
               <br />
@@ -98,9 +88,9 @@
       <div class="col-md-6">
         <div class="mx-4">
           <div class="text-center">
-            <img src="{% static "/site/img/contact.jpg" %}" class="img-fluid" width="80%" />
+            <img src="{% static "/site/img/contact.jpg" %}" class="img-fluid" width="80%" alt="Contact Us" />
           </div>
-          <h1 style="font-weight: bold; text-align: center;">Contact Us</h1>
+          <div class="text-center text-4xl font-bold">Contact Us</div>
           <form method="post">
             {% csrf_token %}
             {% crispy contact_form %}

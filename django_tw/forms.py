@@ -36,9 +36,9 @@ class ContactForm(forms.Form):
         self.helper.form_tag = False
 
         self.helper.layout = Layout(
-            Field("from_email"),
-            Field("subject"),
-            Field("message"),
+            Field("from_email", css_class="input"),
+            Field("subject", css_class="input"),
+            Field("message", css_class="textarea"),
             HTML(
                 '<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">'
             ),
