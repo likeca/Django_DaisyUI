@@ -1,0 +1,82 @@
+- name: APT update & upgrade
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Install apt packages
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - curl
+      - git
+      - gnupg
+      - zip
+      - ca-certificates
+      - net-tools
+      - vim
+
+- name: Set America/Toronto Local Timezone
+  timezone:
+    name: America/Toronto
+
+- name: Copy hostname file to {{ ansible_hostname }} /etc/hostname
+  template:
+    src: hostname
+    dest: /etc/hostname
+
+- name: Copy .profile file to {{ ansible_hostname }} /home/{{ ansible_user }}/.profile
+  become_user: "{{ ansible_user }}"
+  copy:
+    src: "files/.profile"
+    dest: "/home/{{ ansible_user }}/.profile"
+
+- name: Copy hosts file to {{ ansible_hostname }} /etc/hosts
+  template:
+    src: hosts
+    dest: /etc/hosts
+
+- name: Copy authorized_keys file to {{ ansible_hostname }} /home/{{ ansible_user }}/.ssh/authorized_keys
+  copy:
+    src: "files/authorized_keys"
+    dest: "/home/{{ ansible_user }}/.ssh/authorized_keys"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0600
+
+# # Upload id_rsa for Github
+# - name: Copy id_rsa file to {{ ansible_hostname }} /home/{{ ansible_user }}/.ssh/id_rsa
+#   copy:
+#     src: "files/id_rsa"
+#     dest: "/home/{{ ansible_user }}/.ssh/id_rsa"
+#     owner: "{{ ansible_user }}"
+#     group: "{{ ansible_user }}"
+#     mode: 0400
+
+# - name: Copy id_rsa.pub file to {{ ansible_hostname }} /home/{{ ansible_user }}/.ssh/id_rsa.pub
+#   copy:
+#     src: "files/id_rsa.pub"
+#     dest: "/home/{{ ansible_user }}/.ssh/id_rsa.pub"
+#     owner: "{{ ansible_user }}"
+#     group: "{{ ansible_user }}"
+#     mode: 0444
+
+# # Disable update /etc/hosts
+# - name: Copy cloud.cfg file to {{ ansible_hostname }} /etc/cloud/cloud.cfg
+#   copy:
+#     src: "files/cloud.cfg"
+#     dest: "/etc/cloud/cloud.cfg"
+
+- name: Remove useless packages from the cache
+  apt:
+    autoclean: yes
+
+- name: Remove dependencies that are no longer required
+  apt:
+    autoremove: yes
+
+- name: Remove root user password
+  shell: passwd -d root
+
+- name: Remove {{ ansible_user }} user password
+  shell: passwd -d {{ ansible_user }}

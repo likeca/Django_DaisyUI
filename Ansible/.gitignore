@@ -1,0 +1,48 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Python Virtual Environment
+**/venv/
+
+# Django stuff:
+*.mo
+*.pot
+
+# Logs:
+*.log
+
+# Windows
+Thumbs.db
+Desktop.ini
+*.exe
+
+# SQLite3 database files:
+*.db
+*.sqlite3
+*.sqlite
+
+# Linux Editors
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+*.swp
+*.swo
+
+# Mac
+.DS_Store
+._*
+
+# .ssh files
+id_rsa
+id_rsa.pub

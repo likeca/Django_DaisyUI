@@ -1,0 +1,57 @@
+- name: APT Update
+  apt:
+    update_cache: yes
+    upgrade: dist
+
+- name: Install snapd for certbot
+  apt:
+    name: "{{ packages }}"
+  vars:
+    packages:
+      - snapd
+
+- name: Install core
+  community.general.snap:
+    name:
+      - core
+
+- name: Install Let's Encrypt certbot
+  community.general.snap:
+    name:
+      - certbot
+    classic: true
+
+- name: Link /snap/bin/certbot to /usr/bin/certbot
+  file:
+    src: /snap/bin/certbot
+    dest: /usr/bin/certbot
+    state: link
+    force: yes
+
+- name: Create /usr/share/nginx/html/.well-known/ for Let's Encrypt
+  file:
+    path: /usr/share/nginx/html/.well-known/
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: nginx
+    mode: 0755
+# !!!!!!!! Manual execute "sudo certbot --nginx" first   !!!!!!!!
+# !!!!!!!! Uncomment and execute the following operation !!!!!!!!
+
+# - name: Copy nginx.conf to /etc/nginx/nginx.conf
+#   template:
+#     src: "nginx.conf"
+#     dest: "/etc/nginx/nginx.conf"
+
+# - name: Start nginx
+#   service:
+#     name: nginx
+#     enabled: yes
+#     state: reloaded
+
+# - name: Add cron job for certbot renewal
+#   cron:
+#     name: Letsencrypt SSL certificate Certbot automatic renewal.
+#     minute: "0"
+#     hour: "1"
+#     job: 'certbot renew --post-hook "systemctl reload nginx"'

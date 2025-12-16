@@ -14,6 +14,7 @@ dependencies = [
     "django-recaptcha>=4.1.0",     # Google recaptcha v3
     "djangorestframework>=3.16.1", # REST Web APIs
     "dj-rest-auth>=7.0.1",         # Django REST Authentication (django-allauth and djangorestframework)
+    "psycopg[binary]>=3.3.2",      # PostgreSQL database adapter for Python
     "jwt",                         # JSON Web Token Authentication
 
     "django-compressor>=4.5.1", # Django Compressor Compress CSS and JS, $ pip install rcssmin --install-option="--without-c-extensions"

@@ -1,0 +1,26 @@
+# $ ansible-playbook -i inventories/oci playbooks/oci-ubuntu.yml
+---
+- name: Ansible Tasks
+  hosts: lhchub
+  remote_user: ubuntu
+  become: true
+  pre_tasks:
+    - name: Add variables
+      set_fact:
+        ansible_user: ubuntu
+        ansible_hostname: lhchub
+        database_filename: db.sqlite
+        django_project_name: lhchub
+        domain_name: lhchub.com
+        email: like.ca@gmail.com
+        git_username: likeca
+        git_repository: lhchub-be
+        project_directory: lhchub
+        ubuntu_code_name: jammy
+  roles:
+    # - common
+    # - docker
+    # - nginx
+    - django
+    # - letsencrypt
+    # - cronjob
