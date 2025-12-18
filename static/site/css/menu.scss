@@ -1,35 +1,35 @@
 @import "vars";
 
-@media (max-width: 796) {
-    .navbar-collapse {
-        background-color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+// @media (max-width: 796) {
+//     .navbar-collapse {
+//         background-color: white;
+//         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//     }
 
-    .navbar-nav>.nav-item {
-        margin: 5px 10px;
-    }
+//     .navbar-nav>.nav-item {
+//         margin: 5px 10px;
+//     }
 
-    .collapse-signin {
-        padding: 10px;
-        margin: 10px 10px;
-    }
+//     .collapse-signin {
+//         padding: 10px;
+//         margin: 10px 10px;
+//     }
 
-    .collapse-language {
-        margin: 10px 10px;
-    }
-}
+//     .collapse-language {
+//         margin: 10px 10px;
+//     }
+// }
 
-@media (max-width: 400px) {
-    #sidebar {
-        height: 60px;
-        width: 100%;
-        position: fixed;
-        top: unset;
-        bottom: 0;
-        background-color: yellow;
-    }
-}
+// @media (max-width: 400px) {
+//     #sidebar {
+//         height: 60px;
+//         width: 100%;
+//         position: fixed;
+//         top: unset;
+//         bottom: 0;
+//         background-color: yellow;
+//     }
+// }
 
 // #mainNav {
 //     transition: all 1s;
