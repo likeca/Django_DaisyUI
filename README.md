@@ -211,3 +211,4 @@ python manage.py tailwind update
 
 # DaisyUI
 [DaisyUI Component](https://daisyui.com/components/)
+[aisyUI Components](https://willpinha.github.io/daisy-components/)

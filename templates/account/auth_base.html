@@ -4,15 +4,19 @@
 {% load static %}
 
 {% block content %}
-  <div class="container mt-5" style="max-width: 450px;">
-    <div class="text-center">
-      <h1 class="fw-bold"><img src="{% static 'site/img/logo.png' %}" width="50px" height="50px" /> django_tw.com</h1>
-      <h2 class="m-5 fw-bold">
+  <div class="card bg-base-100 mx-auto mt-20 text-center w-150 shadow-lg">
+    <div class="card-body text-center m-5">
+      <div class="flex justify-center font-bold">
+        <img src="{% static 'site/img/logo.png' %}" class="text-center w-30" />
+      </div>
+      <div class="flex justify-center font-bold text-3xl">django_tw.com</div>
+      <div class="m-5 text-2xl font-bold">
         {% block form_heading %}
 
         {% endblock %}
-      </h2>
+      </div>
     </div>
+
     {% block auth_content %}
 
     {% endblock %}
