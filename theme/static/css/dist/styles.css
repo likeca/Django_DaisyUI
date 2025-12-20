@@ -2061,13 +2061,6 @@
     box-shadow: none;
     background-image: none;
   }
-  .card-title {
-    display: flex;
-    align-items: center;
-    gap: calc(0.25rem * 2);
-    font-size: var(--cardtitle-fs, 1.125rem);
-    font-weight: 600;
-  }
   .chat {
     display: grid;
     column-gap: calc(0.25rem * 3);
@@ -2111,9 +2104,6 @@
   .min-h-0 {
     min-height: calc(var(--spacing) * 0);
   }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
   .w-20 {
     width: calc(var(--spacing) * 20);
   }
@@ -2128,15 +2118,6 @@
   }
   .w-150 {
     width: calc(var(--spacing) * 150);
-  }
-  .w-250 {
-    width: calc(var(--spacing) * 250);
-  }
-  .w-450 {
-    width: calc(var(--spacing) * 450);
-  }
-  .w-2450 {
-    width: calc(var(--spacing) * 2450);
   }
   .w-auto {
     width: auto;
