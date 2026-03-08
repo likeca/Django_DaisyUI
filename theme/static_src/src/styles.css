@@ -33,6 +33,7 @@
 
 .btn, .input, .select{
   &:focus{
-    @apply outline-blue-300;
+    @apply outline-red-300;
+    border: 0;
   }
 }
