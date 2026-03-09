@@ -85,7 +85,8 @@
             {% block messages %}
               {% if messages %}
                 {% for message in messages %}
-                  <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'error' %}alert-error{% elif message.tags == 'warning' %}alert-warning{% else %}alert-info{% endif %} m-4" role="alert">
+                  <div class="alert {% if message.tags == 'success' %}alert-success{% elif message.tags == 'error' %}alert-error{% elif message.tags == 'warning' %}alert-warning{% else %}alert-info{% endif %} m-4"
+                       role="alert">
                     <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -105,18 +106,23 @@
         <div class="drawer-side">
           <ul class="menu w-80 min-h-full bg-base-200 text-base-content p-0 no-scrollbar overflow-y-auto">
             <button class="btn btn-circle btn-sm z-50 top-2 right-0 mt-1 mr-3 absolute" onclick="closeDrawer()">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="my-1.5 inline-block size-4">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   viewBox="0 0 24 24"
+                   stroke-linejoin="round"
+                   stroke-linecap="round"
+                   stroke-width="2"
+                   fill="none"
+                   stroke="currentColor"
+                   class="my-1.5 inline-block size-4">
                 <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
                 <path d="M9 4v16"></path>
                 <path d="M14 10l2 2l-2 2"></path>
               </svg>
             </button>
-            <li class="sticky top-0 z-10 bg-base-200 font-bold text-lg mb-4">
-              <div>
-                <img class="mask mask-squircle w-10" src="{% static 'site/img/logo.svg' %}" alt="Logo">
-                Ottawa STEM Club
-              </div>
-            </li>
+            <div class="sticky top-2 ml-2 z-10 bg-base-200 font-bold text-lg mb-4">
+              <img class="mask mask-squircle w-10" src="{% static 'site/img/logo.svg' %}" alt="Logo">
+              Ottawa STEM Club
+            </div>
             <div class="p-2">
               <li>
                 <a class="font-normal" href="{% url 'home' %}">
@@ -145,7 +151,14 @@
                       <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                     </svg>
                     Settings
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-5 h-5 mt-1 float-right delay-400 duration-500 transition-all ">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor"
+                         aria-hidden="true"
+                         data-slot="icon"
+                         class="w-5 h-5 mt-1 float-right delay-400 duration-500 transition-all ">
                       <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"></path>
                     </svg>
                   </div>
