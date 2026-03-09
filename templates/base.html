@@ -46,13 +46,13 @@
   <body>
     <div id="language" class="hidden">{{ LANGUAGE_CODE }}</div>
     {% block drawer %}
-      <div id="drawer" class="drawer lg:drawer-open">
+      <div id="drawer" class="drawer xs:drawer-open">
         <input id="left-sidebar-drawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
           {% block navbar %}
             <div class="navbar sticky top-0 bg-base-100 z-10 shadow-md min-h-0 h-14">
               <div class="flex-1">
-                <label id="drawer-button" for="left-sidebar-drawer" class="btn btn-square bg-base-300 border-neutral-500 rounded-xl lg:hidden" onclick="openDrawer()">
+                <label id="drawer-button" for="left-sidebar-drawer" class="btn btn-square bg-base-300 border-neutral-500 rounded-xl xs:hidden" onclick="openDrawer()">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-5 inline-block w-5">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
                   </svg>
@@ -244,15 +244,15 @@
 
           function openDrawer() {
               console.log("Opening drawer...");
-              drawer.classList.add('lg:drawer-open');
-              drawerButton.classList.add('lg:hidden');
+              drawer.classList.add('xs:drawer-open');
+              drawerButton.classList.add('xs:hidden');
               checkbox.checked = true;
           }
 
           function closeDrawer() {
               console.log("Closing drawer...");
-              drawer.classList.remove('lg:drawer-open');
-              drawerButton.classList.remove('lg:hidden');
+              drawer.classList.remove('xs:drawer-open');
+              drawerButton.classList.remove('xs:hidden');
               checkbox.checked = false;
           }
       </script>

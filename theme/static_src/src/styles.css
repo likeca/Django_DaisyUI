@@ -31,9 +31,15 @@
   */
 @source "../../../**/*.{html,py,js}";
 
-.btn, .input, .select{
-  &:focus{
+.btn,
+.input,
+.select {
+  &:focus {
     @apply outline-red-300;
     border: 0;
   }
+}
+
+@theme {
+  --breakpoint-xs: 320px;
 }
