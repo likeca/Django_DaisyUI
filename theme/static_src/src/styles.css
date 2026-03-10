@@ -15,8 +15,13 @@
   /* --color-base-200: #f3f4f6; */
   /* --color-primary: #26b3fb;    Change main brand color */
   /* --color-base-100: #ffffff;   Change page background */
-
 }
+
+@theme {
+  --font-sans: "Twemoji Country Flags", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Twemoji Country Flags", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
 
 /* .btn:active {
   color: red

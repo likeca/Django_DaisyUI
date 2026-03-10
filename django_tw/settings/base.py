@@ -99,6 +99,7 @@ INSTALLED_APPS = (
     "django.contrib.sitemaps",
     "django.contrib.sites",
     "django.contrib.staticfiles",
+    
     "compressor",
     "tailwind",
     "theme",
