@@ -1,6 +1,6 @@
 (function () {
     let top = window.scrollY;
-    console.log(top);
+    // console.log(top);
     if (top < 40) {
         // document.getElementById("navbar").classList.remove("shadow-lg");
         // document.getElementById("navbar").classList.add("shadow-sm");

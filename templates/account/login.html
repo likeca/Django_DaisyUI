@@ -4,43 +4,45 @@
 {% load crispy_forms_tags %}
 {% load socialaccount %}
 
-{% block head_title %}{{ block.super }} - {% trans "Sign in" %}{% endblock head_title %}
+{% block head_title %}
+    {{ block.super }} - {% trans "Sign in" %}
+{% endblock head_title %}
 
 {% block extra_head_script %}
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock extra_head_script %}
 
 {% block navbar_left %}
-  {% include '_navbar.html' %}
-{% endblock %}
+    {% include "_navbar.html" %}
+{% endblock navbar_left %}
 
 {% block form_heading %}
     {% trans "Sign in" %}
-{% endblock %}
+{% endblock form_heading %}
 
 {% block auth_content %}
     {% get_providers as socialaccount_providers %}
     {% if socialaccount_providers %}
-        <div class="list-group">
-            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-        </div>
+        <div class="list-group">{% include "socialaccount/snippets/provider_list.html" with process="login" %}</div>
         {% include "socialaccount/snippets/login_extra.html" %}
     {% else %}
         <p>
-            <span>{% trans "Don't have an account?" %} </span><a href="{{ signup_url }}">{% trans "Sign up" %}</a>
+            <span>{% trans "Don't have an account?" %}</span><a href="{{ signup_url }}">{% trans "Sign up" %}</a>
         </p>
     {% endif %}
-    <hr>
+    <hr class="my-8">
     {% include "socialaccount/snippets/login_extra.html" %}
-    <form class="login" method="POST" action="{% url 'account_login' %}">
+    <form class="login text-start" method="post" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form | crispy }}
-        <button class="btn btn-primary mb-3 fw-bold" type="submit">{% trans "Sign in" %}</button>
     </form>
+    <button class="btn btn-primary mb-3 fw-bold text-center" type="submit">{% trans "Sign in" %}</button>
     <br>
-    <div>
-        <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    <div class="my-3">
+        <a href="{% url 'account_reset_password' %}" class="btn btn-link">{% trans "Forgot Password?" %}</a>
         <br>
-        <span>{% trans "Don't have an account?" %} </span><a href="{{ signup_url }}">{% trans "Sign up" %}</a>
+        <div class="flex items-center justify-center">
+            <span class="my-3">{% trans "Don't have an account?" %}</span><a href="{{ signup_url }}" class="btn btn-link px-2">{% trans "Sign up" %}</a>
+        </div>
     </div>
-{% endblock auth_content%}
+{% endblock auth_content %}

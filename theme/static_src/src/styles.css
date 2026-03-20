@@ -6,7 +6,7 @@
 
 @plugin "daisyui/theme" {
   name: "light";
-  /* --color-primary: #26b3fb;    Change main brand color */
+  --color-primary: #1c4e80;
 }
 
 @plugin "daisyui/theme" {
@@ -21,8 +21,12 @@
   --font-sans: "Twemoji Country Flags", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Twemoji Country Flags", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --breakpoint-xs: 320px;
+  /* --radius-btn: 1rem; */
 }
 
+.btn {
+  border-radius: var(--rounded-btn, 0.8rem);
+}
 
 /* .btn:active {
   color: red
@@ -44,4 +48,9 @@
     @apply outline-red-300;
     border: 0;
   }
+}
+
+.asteriskField {
+  @apply text-red-500;
+  font-weight: bold;
 }

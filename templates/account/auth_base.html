@@ -1,26 +1,26 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% load i18n %}
 {% load static %}
 
 {% block content %}
-  <div class="card border border-zinc-300 mx-auto mt-30 text-center w-150 shadow-lg">
-    <div class="card-body">
+  <div class="card border border-zinc-300 mx-auto mt-10 text-center w-150 shadow-lg">
+    <div class="card-header text-2xl font-bold flex items-center justify-center gap-5 mt-10">
       <div class="flex justify-center font-bold">
-        <img src="{% static 'site/img/logo.png' %}" class="w-30" />
+        <img src="{% static 'site/img/logo.png' %}" alt="logo" class="w-20" />
       </div>
       <div class="flex justify-center font-bold text-3xl">django_tw.com</div>
-      <div class="m-5 text-2xl font-bold">
+    </div>
+    <div class="card-body">
+      <div class="mx-5 text-2xl font-bold">
         {% block form_heading %}
-
-        {% endblock %}
+        {% endblock form_heading %}
       </div>
     </div>
 
-    <div class="px-20 pb-20">
+    <div class="px-20 pb-10">
       {% block auth_content %}
-
-      {% endblock %}
+      {% endblock auth_content %}
     </div>
   </div>
-{% endblock %}
+{% endblock content %}
