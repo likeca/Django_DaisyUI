@@ -32,11 +32,16 @@
     {% endif %}
     <hr class="my-8">
     {% include "socialaccount/snippets/login_extra.html" %}
-    <form class="login text-start" method="post" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        {{ form | crispy }}
+    <form class="login" method="post" action="{% url 'account_login' %}">
+        <div class="text-start">
+            {% csrf_token %}
+            {{ form | crispy }}
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-primary fw-bold" type="submit">{% trans "Sign in" %}</button>
+        </div>
+
     </form>
-    <button class="btn btn-primary mb-3 fw-bold text-center" type="submit">{% trans "Sign in" %}</button>
     <br>
     <div class="my-3">
         <a href="{% url 'account_reset_password' %}" class="btn btn-link">{% trans "Forgot Password?" %}</a>
