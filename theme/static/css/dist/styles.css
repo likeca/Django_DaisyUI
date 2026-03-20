@@ -2018,8 +2018,14 @@
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
   .my-20 {
     margin-block: calc(var(--spacing) * 20);
+  }
+  .my-53 {
+    margin-block: calc(var(--spacing) * 53);
   }
   .ms-1 {
     margin-inline-start: calc(var(--spacing) * 1);
@@ -2103,6 +2109,9 @@
   }
   [dir="rtl"] .breadcrumbs > menu > li + *:before, [dir="rtl"] .breadcrumbs > ul > li + *:before, [dir="rtl"] .breadcrumbs > ol > li + *:before {
     rotate: -135deg;
+  }
+  .mr-0 {
+    margin-right: calc(var(--spacing) * 0);
   }
   .mr-3 {
     margin-right: calc(var(--spacing) * 3);
@@ -2591,6 +2600,9 @@
     font-size: 0.75rem;
     padding-inline: calc(0.25rem * 2.5 - var(--border));
   }
+  .px-0 {
+    padding-inline: calc(var(--spacing) * 0);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -2603,8 +2615,20 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .ps-2 {
+    padding-inline-start: calc(var(--spacing) * 2);
+  }
+  .pr-0 {
+    padding-right: calc(var(--spacing) * 0);
+  }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
+  }
+  .pl-1 {
+    padding-left: calc(var(--spacing) * 1);
+  }
+  .pl-2 {
+    padding-left: calc(var(--spacing) * 2);
   }
   .text-center {
     text-align: center;

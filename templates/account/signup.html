@@ -6,34 +6,39 @@
 {% load socialaccount %}
 
 
-{% block head_title %}{{ block.super }} - {% trans "Sign up" %}{% endblock head_title %}
+{% block head_title %}
+    {{ block.super }} - {% trans "Sign up" %}
+{% endblock head_title %}
 
 {% block extra_head_script %}
     <script src='https://www.google.com/recaptcha/api.js' async defer></script>
 {% endblock extra_head_script %}
 
 {% block auth_content %}
-    <h3 class="text-center mt-3">{% trans "Sign in" %}</h3>
+    <h3 class="text-center mb-3 text-2xl font-bold">{% trans "Sign in" %}</h3>
     {% get_providers as socialaccount_providers %}
     {% if socialaccount_providers %}
-        <div class="list-group">
-            {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-        </div>
+        <div class="list-group">{% include "socialaccount/snippets/provider_list.html" with process="login" %}</div>
         {% include "socialaccount/snippets/login_extra.html" %}
     {% else %}
         <p>
-            <span>{% trans "Don't have an account?" %} </span><a href="{{ signup_url }}" class="ml-1">{% trans "Sign up" %}</a>
+            <span>{% trans "Don't have an account?" %}</span><a href="{{ signup_url }}" class="ml-1">{% trans "Sign up" %}</a>
         </p>
     {% endif %}
-    <hr>
-    <h3 class="text-center mt-3">{% trans "Sign up" %}</h3>
+    <hr class="my-8">
+    <div class="text-center my-3 text-2xl font-bold">{% trans "Sign up" %}</div>
     <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{  form | crispy }}
-        <button type="submit" class="btn btn-primary fw-bold">{% trans "Sign up" %}</button>
+        <div class="mb-3 text-start">
+            {% csrf_token %}
+            {{ form | crispy }}
+        </div>
+        <div class="my-5">
+            <button type="submit" class="btn btn-primary fw-bold">{% trans "Sign up" %}</button>
+        </div>
     </form>
 
-    <hr class="my-3">
     {% url 'account_login' as url_login %}
-    <p>{% blocktrans %}Already have an account? Then please <a href="{{ url_login }}">Sign in</a>.{% endblocktrans %}</p>
+    <div class="flex items-center justify-center">
+        {% blocktrans %}Already have an account? Then please <a href="{{ url_login }}" class="btn btn-link pl-1 pr-0">Sign in</a>.{% endblocktrans %}
+    </div>
 {% endblock auth_content %}
