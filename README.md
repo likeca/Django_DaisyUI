@@ -151,6 +151,63 @@ django-allauth==0.50.0
 dj-rest-auth==4.0.1    
 
 
+
+
+# Django Create Superuser and update site
+```bash
+# python manage.py createsuperuser (Manual)
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py shell -c "import getpass; password = getpass.getpass('Password:'); from django.contrib.auth.models import User; User.objects.create_superuser('Admin', 'admin@example.com', password)"
+
+python manage.py shell
+from profiles.models import Profile
+superuser = Profile.objects.get(pk=1)
+superuser.email_verified = True
+superuser.save()
+from allauth.account.models import EmailAddress
+superuser = EmailAddress(email='admin@example.com', verified=True, primary=True, user_id=1)
+superuser.save()
+
+from django.contrib.sites.models import Site
+site = Site.objects.all()[0]
+site.domain = "example.com"
+site.name = "Local Home Contractor Hub"
+site.save()
+exit()
+
+python manage.py loaddata categories
+python manage.py loaddata canada_cities.yaml
+
+# Add Tags for test
+from profiles.models import Profile
+user = Profile.objects.get(pk=2)
+user.tags.all()
+user.tags.add("Artisans & Crafts", "Childcare & Nanny")
+
+```
+
+# Django Load Data
+```bash
+python manage.py help cities_light
+python manage.py cities_light
+python manage.py cities_light --force-import-all
+
+python manage.py loaddata categories
+python manage.py loaddata canada_cities.yaml
+```
+
+# Django Dump data 
+```bash
+python manage.py dumpdata auth.user --format yaml > user.yaml
+python manage.py dumpdata profiles --format yaml > profiles.yaml
+
+python manage.py dumpdata cfs.CFSColor --format yaml > cfs_colors.yaml
+python manage.py dumpdata products.price --format yaml > prices.yaml
+```
+
 # Test SendEmail
 ```bash
 python manage.py shell

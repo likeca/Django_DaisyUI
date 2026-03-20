@@ -20,6 +20,7 @@
 @theme {
   --font-sans: "Twemoji Country Flags", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Twemoji Country Flags", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --breakpoint-xs: 320px;
 }
 
 
@@ -44,7 +45,3 @@
     border: 0;
   }
 }
-
-/* @theme {
-  --breakpoint-xs: 320px;
-} */

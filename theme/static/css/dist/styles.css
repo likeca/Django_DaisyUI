@@ -1912,6 +1912,11 @@
   .container {
     width: 100%;
   }
+  @media (width >= 320px) {
+    .container {
+      max-width: 320px;
+    }
+  }
   @media (width >= 40rem) {
     .container {
       max-width: 40rem;
@@ -2768,6 +2773,42 @@
   }
   @media (width < 48rem) {
     .max-md\:hidden {
+      display: none;
+    }
+  }
+  @media (width >= 320px) {
+    .xs\:drawer-open > .drawer-side {
+      overflow-y: auto;
+    }
+    .xs\:drawer-open > .drawer-toggle {
+      display: none;
+    }
+    .xs\:drawer-open > .drawer-toggle ~ .drawer-side {
+      pointer-events: auto;
+      visibility: visible;
+      position: sticky;
+      display: block;
+      width: auto;
+      overscroll-behavior: auto;
+      opacity: 100%;
+    }
+    .xs\:drawer-open > .drawer-toggle ~ .drawer-side > .drawer-overlay {
+      cursor: default;
+      background-color: transparent;
+    }
+    .xs\:drawer-open > .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+      translate: 0%;
+    }
+    [dir="rtl"] .xs\:drawer-open > .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+      translate: 0%;
+    }
+    .xs\:drawer-open > .drawer-toggle:checked ~ .drawer-side {
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+  @media (width >= 320px) {
+    .xs\:hidden {
       display: none;
     }
   }
