@@ -20,7 +20,7 @@
 @theme {
   --font-sans: "Twemoji Country Flags", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-serif: "Twemoji Country Flags", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --breakpoint-xs: 320px;
+  --breakpoint-xs: 420px;
   /* --radius-btn: 1rem; */
 }
 
@@ -53,4 +53,10 @@
 .asteriskField {
   @apply text-red-500;
   font-weight: bold;
+}
+
+/* Profile */
+.profile-head {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJklEQVQIW2NkAIILFy78NzAwYATRjCABZEGwAEwFiA1WBlIOUwkA72gTdDIYVO4AAAAASUVORK5CYII=) repeat;
+  padding: 10px;
 }
