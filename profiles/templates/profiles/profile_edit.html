@@ -1,55 +1,42 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load i18n %}
 {% load static %}
 {% load crispy_forms_tags %}
 
 {% block head_title %}
-  {{ block.super }} -{% trans 'Profile' %}
-{% endblock %}
+  {{ block.super }} - {% trans "Profile" %}
+{% endblock head_title %}
 
 {% block navbar_left %}
-  {% include '_navbar.html' %}
-{% endblock %}
+  {% include "_navbar.html" %}
+{% endblock navbar_left %}
 
-<!-- Benefits of the Django application -->
 {% block content %}
-  <br />
-  <br />
-  <br />
-  <div class="container">
-    <h1 class="text-primary">{% trans 'Edit Profile' %}</h1>
-    <div class="divider my-5">{% trans "OR" %}</div>
-    <div class="row">
-      <!-- left column -->
-      <div class="col-md-3">
+  <div class="m-10 mt-5">
+    <div class="text-2xl font-bold">{% trans "Edit Profile" %}</div>
+    <div class="divider my-5"></div>
+    <div class="mt-5 flex flex-col space-y-5 md:flex-row md:space-y-0 md:space-x-8">
+      <div class="w-30 mb-5">
         {% if user.profile.avatar %}
-          <img title="profile avatar" src="{{ MEDIA_URL }}{{ user.profile.avatar }}" height="140px" width="auto" alt="avatar" />
+          <img title="profile avatar" src="{{ MEDIA_URL }}{{ user.profile.avatar }}" alt="avatar" />
         {% else %}
           <img src="{% static 'site/img/profile/default.png' %}" alt="avatar" />
         {% endif %}
       </div>
-
-      <!-- edit form column -->
-      <div class="col-md-9">
-        <h3 style="font-weight: bold;">{% trans 'Personal Information' %}</h3>
+      <div>
+        <div class="font-bold mb-3">{% trans "Personal Information" %}</div>
         <form enctype="multipart/form-data" method="post">
           {% csrf_token %}
           {% crispy user_form %}
           {% crispy profile_form %}
         </form>
+        <div class="mt-5">
+          <a class="btn btn-primary float-end" href="{% url 'account_reset_password' %}">{% trans "Change Password" %}</a>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <a class="btn btn-primary float-end" href="{% url 'account_reset_password' %}">{% trans 'Change Password' %}</a>
-      </div>
-    </div>
-  </div>
-{% endblock %}
+{% endblock content %}
 
 {% block scripts %}
-
-{% endblock %}
+{% endblock scripts %}

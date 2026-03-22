@@ -280,3 +280,7 @@ https://github.com/robbins23/admin-dashboard-nextjs-typescript-daisyui-template?
 
 # DaisyUI Icons
 https://heroicons.com/outline
+
+
+# crispy-daisyui
+https://github.com/fabge/crispy-daisyui
