@@ -30,7 +30,7 @@
             <span>{% trans "Don't have an account?" %}</span><a href="{{ signup_url }}">{% trans "Sign up" %}</a>
         </p>
     {% endif %}
-    <hr class="my-8">
+    <div class="divider my-5">{% trans "OR" %}</div>
     {% include "socialaccount/snippets/login_extra.html" %}
     <form class="login" method="post" action="{% url 'account_login' %}">
         <div class="text-start">

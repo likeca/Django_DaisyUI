@@ -25,7 +25,7 @@
             <span>{% trans "Don't have an account?" %}</span><a href="{{ signup_url }}" class="ml-1">{% trans "Sign up" %}</a>
         </p>
     {% endif %}
-    <hr class="my-8">
+    <div class="divider my-5">{% trans "OR" %}</div>
     <div class="text-center my-3 text-2xl font-bold">{% trans "Sign up" %}</div>
     <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         <div class="mb-3 text-start">
