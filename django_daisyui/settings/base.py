@@ -34,8 +34,8 @@ ALLOWED_HOSTS = eval(env("ALLOWED_HOSTS"))
 # Sitemaps
 # Need to update database table: django_site manual from example.com to domain name, which match record ID=1
 SITE_ID = 1
-SITE_NAME = "django_tw"
-SITE_URL = "https://django_tw.com/"
+SITE_NAME = "django_daisyui"
+SITE_URL = "https://django_daisyui.com/"
 
 # Define Local Server MEDIA_ROOT for User-uploaded files like profile pics need to be served
 STATIC_URL = "static/"  # Local
@@ -80,8 +80,8 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
                 # django-allauth needs this from django
                 "django.template.context_processors.request",
-                # global settings for templates. Need update django_tw to project folder name
-                "django_tw.context_processors.global_settings",
+                # global settings for templates. Need update django_daisyui to project folder name
+                "django_daisyui.context_processors.global_settings",
             ],
         },
     },
@@ -137,8 +137,8 @@ MIDDLEWARE = (
     "allauth.account.middleware.AccountMiddleware",
 )
 
-ROOT_URLCONF = "django_tw.urls"
-ASGI_APPLICATION = "django_tw.asgi.application"
+ROOT_URLCONF = "django_daisyui.urls"
+ASGI_APPLICATION = "django_daisyui.asgi.application"
 
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

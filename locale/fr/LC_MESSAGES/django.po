@@ -17,35 +17,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: django_tw/forms.py:12
+#: django_daisyui/forms.py:12
 msgid "Password"
 msgstr "Mot de passe"
 
-#: django_tw/forms.py:13
+#: django_daisyui/forms.py:13
 msgid "Password (again)"
 msgstr "Mot de passe (encore)"
 
-#: django_tw/forms.py:44
+#: django_daisyui/forms.py:44
 msgid "Send"
 msgstr "Envoyer"
 
-#: django_tw/settings/timezone_language.py:16
+#: django_daisyui/settings/timezone_language.py:16
 msgid "English"
 msgstr "Anglais"
 
-#: django_tw/settings/timezone_language.py:17
+#: django_daisyui/settings/timezone_language.py:17
 msgid "French"
 msgstr "Français"
 
-#: django_tw/settings/timezone_language.py:18
+#: django_daisyui/settings/timezone_language.py:18
 msgid "Simplified Chinese"
 msgstr "Chinois simplifié"
 
-#: django_tw/views.py:47
+#: django_daisyui/views.py:47
 msgid "Email sent!"
 msgstr "Email envoyé!"
 
-#: django_tw/views.py:51
+#: django_daisyui/views.py:51
 msgid "There was a problem with the form. Please check the details."
 msgstr "Il y avait un problème avec le formulaire. S’il vous plaît vérifier les détails."
 

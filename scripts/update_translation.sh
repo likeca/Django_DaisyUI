@@ -1,8 +1,8 @@
 # Create the message file
-# source $PWD/.venv/bin/activate && ./src/manage.py makemessages -l fr --pythonpath $PWD/django_tw
-# source $PWD/.venv/bin/activate && ./src/manage.py makemessages -l zh-cn --pythonpath $PWD/django_tw
+# source $PWD/.venv/bin/activate && ./src/manage.py makemessages -l fr --pythonpath $PWD/django_daisyui
+# source $PWD/.venv/bin/activate && ./src/manage.py makemessages -l zh-cn --pythonpath $PWD/django_daisyui
 
-# Update existing messages file, execute from django_tw/scripts/
+# Update existing messages file, execute from django_daisyui/scripts/
 PROJECT_PATH=$PWD
 cd src
 source $PROJECT_PATH/.venv/bin/activate && ./manage.py makemessages -a

@@ -52,7 +52,7 @@ pip install -r requirements/production.txt
 !!! project name CAN NOT use '-' due to python conflict
 
 ## Installation
-1. Change project name and django_tw folder name
+1. Change project name and django_daisyui folder name
 
 ### Quick start
 To set up a development environment quickly, first install Python 3. It
@@ -113,7 +113,7 @@ python manage.py ping_google
 ```
 
 # Daphne
-daphne django_tw.asgi:application
+daphne django_daisyui.asgi:application
 
 # Django Auto Translate - django-autotranslate
 ```bash

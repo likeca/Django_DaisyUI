@@ -16,8 +16,8 @@ DEFAULT_FROM_EMAIL = "info@django.com"
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"  # 'mandatory' or 'optional'
 
 ACCOUNT_FORMS = {
-    "signup": "django_tw.forms.AllauthSignupForm",
-    "login": "django_tw.forms.AllauthSigninForm",
+    "signup": "django_daisyui.forms.AllauthSignupForm",
+    "login": "django_daisyui.forms.AllauthSigninForm",
 }
 ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
 LOGIN_REDIRECT_URL = reverse_lazy("profiles:show_self")  # Redirect after sign in

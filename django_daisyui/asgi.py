@@ -10,15 +10,15 @@ import os
 
 if os.environ.get("DJANGO_ENVIRONMENT") == "Development":
     os.environ.setdefault(
-        "DJANGO_SETTINGS_MODULE", "django_tw.settings.environments.development"
+        "DJANGO_SETTINGS_MODULE", "django_daisyui.settings.environments.development"
     )
 elif os.environ.get("DJANGO_ENVIRONMENT") == "VirtualMachine":
     os.environ.setdefault(
-        "DJANGO_SETTINGS_MODULE", "django_tw.settings.environments.virtualmachine"
+        "DJANGO_SETTINGS_MODULE", "django_daisyui.settings.environments.virtualmachine"
     )
 else:
     os.environ.setdefault(
-        "DJANGO_SETTINGS_MODULE", "django_tw.settings.environments.container"
+        "DJANGO_SETTINGS_MODULE", "django_daisyui.settings.environments.container"
     )
 
 from django.core.asgi import get_asgi_application

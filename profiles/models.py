@@ -11,7 +11,7 @@ from django.utils.translation import gettext_lazy as _
 from PIL import Image
 
 from django_countries.fields import CountryField
-from django_tw.constants import PROVINCE
+from django_daisyui.constants import PROVINCE
 
 # Local Storage
 from django.core.files.storage import FileSystemStorage

@@ -18,35 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: django_tw/forms.py:12
+#: django_daisyui/forms.py:12
 msgid "Password"
 msgstr "密码"
 
-#: django_tw/forms.py:13
+#: django_daisyui/forms.py:13
 msgid "Password (again)"
 msgstr "密码"
 
-#: django_tw/forms.py:44
+#: django_daisyui/forms.py:44
 msgid "Send"
 msgstr "发送"
 
-#: django_tw/settings/timezone_language.py:16
+#: django_daisyui/settings/timezone_language.py:16
 msgid "English"
 msgstr "英语"
 
-#: django_tw/settings/timezone_language.py:17
+#: django_daisyui/settings/timezone_language.py:17
 msgid "French"
 msgstr "法语"
 
-#: django_tw/settings/timezone_language.py:18
+#: django_daisyui/settings/timezone_language.py:18
 msgid "Simplified Chinese"
 msgstr "简体中文"
 
-#: django_tw/views.py:47
+#: django_daisyui/views.py:47
 msgid "Email sent!"
 msgstr "邮件已发送！"
 
-#: django_tw/views.py:51
+#: django_daisyui/views.py:51
 msgid "There was a problem with the form. Please check the details."
 msgstr "表单有问题。请检查详细信息。"
 
