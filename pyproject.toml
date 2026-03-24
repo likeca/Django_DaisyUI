@@ -18,7 +18,7 @@ dependencies = [
     "PyJWT>=2.10.1",               # JSON Web Tokens (JWT) encode and decode 
 
     "django-compressor>=4.6.0", # Django Compressor Compress CSS and JS, $ pip install rcssmin --install-option="--without-c-extensions"
-    # "django-libsass>=0.9",      # Django Libsass is a Django app that provides a template tag for compiling Sass stylesheets# Django Compressor compile scss to css
+    "django-libsass>=0.9",      # Django Libsass is a Django app that provides a template tag for compiling Sass stylesheets# Django Compressor compile scss to css
 
     "google-api-python-client>=2.192.0", # Google API client library for Python
     "google-auth==2.49.0",               # Google Authentication Library for Python
