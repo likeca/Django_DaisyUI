@@ -244,17 +244,31 @@ python manage.py showmigrations
 # Django Tailwind
 [Django-Tailwind](https://django-tailwind.readthedocs.io/en/latest/)
 ```bash
+# base.py
+INSTALLED_APPS = [
+    "tailwind",
+]
+
 # Create a Tailwind CSS compatible Django app "theme"
 python manage.py tailwind init
+# Enter Tailwind app name [theme]: 
+# Choose template:
+# 1 - Tailwind v4 Standalone - Simple and doesn't require Node.js
+# 2 - Tailwind v4 Full - All the bells and whistles, requires Node.js
+# 3 - Tailwind v3 Full - Legacy template for Tailwind v3 projects, requires Node.js
+# Enter choice [1-3]: 2    # Choose npm-based
+
+# Add "theme" to base.py
+INSTALLED_APPS = [
+    "tailwind",
+    "theme",
+]
 
 # Install Tailwind CSS dependencies - cross-env
 python manage.py tailwind install
 
-# Start only the Tailwind watcher, also need to run "python manage.py runserver"
-python manage.py tailwind start
-
-# Create a production build
-python manage.py tailwind build
+# Install daisyui plugin
+python manage.py tailwind plugin_install daisyui
 
 # Check if there are any updates
 python manage.py tailwind check-updates
@@ -270,11 +284,12 @@ python manage.py tailwind update
 [DaisyUI Component](https://daisyui.com/components/)
 [aisyUI Components](https://willpinha.github.io/daisy-components/)
 
-# Django DaisyUI
+
+# Django DaisyUI - Admin UI
 https://github.com/hypy13/django-daisy
 
 
-Daisy UI Admin Dashboard Template
+# Daisy UI Admin Dashboard Template
 https://github.com/robbins23/daisyui-admin-dashboard-template
 https://github.com/robbins23/admin-dashboard-nextjs-typescript-daisyui-template?tab=readme-ov-file
 
