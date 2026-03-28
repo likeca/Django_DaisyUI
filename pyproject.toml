@@ -3,7 +3,7 @@ name = "django_daisyui"
 version = "0.1.0"
 description = "Django Tailwind - Includes Django REST API and GraphQL"
 readme = "README.md"
-requires-python = "==3.13"
+requires-python = "==3.13.9"
 dependencies = [
     "django==6.0.3",
     "daphne==4.1.0",               # Django ASGI deployment for production
@@ -39,7 +39,7 @@ dependencies = [
 dev = [
     "django-browser-reload==1.21.0", # Browser reload for Django development with Tailwind CSS
     "django-debug-toolbar==6.2.0",   # Debugging tool for Django
-    "djlint==1.4.2",                 # HTML and Django Template Linter
+    "djlint==1.36.4",                # HTML and Django Template Linter
     "pylint==4.0.5",                 # Python code static checker
     # "pylint-django==2.6.1",         # Pylint plugin for Django
     "pyyaml==6.0.3",   # YAML parser and emitter for Python
